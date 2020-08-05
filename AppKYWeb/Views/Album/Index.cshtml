@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "Consulta de Albumes";
+}
+
+<header style="background-color:darkslateblue !important">
+    <h2>Albumes <small style="color:gold"><span style="padding-right:5px; padding-left:5px" class="glyphicon glyphicon-th-list"></span>Listado </small></h2>
+</header>
+
+<div id="filterContent" class="row row-no-gutters">
+    @{
+        await Html.RenderPartialAsync("_AlbumFilter");
+    }
+</div>
+
+
+<div id="resultContentAlbumDetails" class="row row-no-gutters">
+    ...
+    @*@{
+        await Html.RenderPartialAsync("GetAlbumListViewSearchResultListAsync",0);
+    }*@
+</div>
+
+
+<div id="modal-album-create" class="modal fade modal-xl" tabindex="-1" role="dialog" aria-labelledby="albumModalLabel" style="width:100%!important;height:100%!important" aria-hidden="true">
+    <div class="modal-dialog modal-xl" style="width:95%!important;height:100%!important;">
+        <div class="modal-content">
+
+        </div>
+    </div>
+</div>
+
+<div id="modal-album-edit" class="modal fade modal-xl" tabindex="-1" role="dialog" aria-labelledby="albumModalLabel" style="width:100%!important;height:100%!important" aria-hidden="true">
+    <div class="modal-dialog modal-xl" style="width:95%!important;height:100%!important;">
+        <div class="modal-content">
+
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/scripts/album/index-album.js"></script>
+
+}

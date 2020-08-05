@@ -1,0 +1,39 @@
+{
+  "SiyNo": [
+    {
+      "Value": 1,
+      "Text": "Si"
+    },
+    {
+      "Value": 2,
+      "Text": "No"
+    }
+  ],
+  "ActivoInactivo": [
+    {
+      "Value": 1,
+      "Text": "Activo"
+    },
+    {
+      "Value": 2,
+      "Text": "Inactivo"
+    }
+  ],
+  "ExampleEstado": [
+    {
+      "Value": 1,
+      "Text": "Activo"
+    },
+    {
+      "Value": 2,
+      "Text": "Inactivo"
+    },
+    {
+      "Value": 3,
+      "Text": "Suspendido"
+    }
+  ]
+
+}
+
+  

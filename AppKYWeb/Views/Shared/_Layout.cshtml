@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Proyecto Omar Rodriguez </title>
+
+    <environment include="Development">
+
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/side-modal.css" />
+        <link rel="stylesheet" href="~/css/styleTableNested.css" />
+        <link rel="stylesheet" href="~/css/side-modal.css" />
+        <link href="~/css/count-down-timer.css" rel="stylesheet" />
+        <link href="~/css/metisMenu.min.css" rel="stylesheet" />
+        <link href="~/css/timeline.css" rel="stylesheet" />
+        <link href="~/css/startmin.css" rel="stylesheet" />
+        <link href="~/css/morris.css" rel="stylesheet" />
+        <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="~/css/navbar.css" rel="stylesheet" />
+        <link href="~/select2/css/select2.css" rel="stylesheet" />
+        <link href="~/css/spinkit.css" rel="stylesheet" />
+        <link href="~/css/jquery-ui.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/css/site.css" />
+
+        <style>
+
+            body {
+                padding: 50px !important;
+            }
+
+            header {
+                text-align: left;
+                background-color: #9EcDDF;
+                background-size: cover;
+                color: #fff;
+                padding-top: 2px;
+                padding-left: 10px;
+                padding-bottom: 2px;
+                margin-bottom: 5px;
+            }
+
+            .paginate_button {
+                font-size: 10px !important
+            }
+
+            .dt-buttons {
+                font: normal;
+                font-size: 12px !important
+            }
+
+            .modal-header {
+                background: #007196 !important;
+                color: #ffffff !important;
+            }
+
+            .row-no-gutters {
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+            }
+        </style>
+
+        <environment include="Development">
+
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/js/Ajax/jszip.min.js"></script>
+            <script src="~/js/Ajax/vfs_fonts.js"></script>
+            <script src="~/js/site.js"></script>
+            <script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/sweetalert/sweetalert2.all.min.js"></script>
+            <script src="~/select2/js/select2.js"></script>
+            <script src="~/js/Jquery/jquery-ui.min.js"></script>
+
+
+
+
+        </environment>
+        <environment exclude="Development">
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+            </script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+            </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>
+            <script src="~/jqueryui/jquery-ui.js"></script>
+        </environment>
+    </environment>
+    <environment exclude="Development">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+
+
+
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+
+
+
+    </environment>
+    
+</head>
+
+<body>
+   
+    <div id="wrapper">
+
+        <!-- Navigation -->
+
+       
+            
+            <div id="menu">
+                <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <div class="container" style="margin-left: 50px;margin-right: 50px;width:90%">
+
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="">
+                            <img src="~/images/logo-plus.jpg" alt="Bertoni Solutions" height="42" width="42">
+                        </a>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active">@Html.ActionLink("Inicio", "Index", new { controller = "Home" })</li>
+
+                            </ul>
+                         
+
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+    
+       
+        <div id="page-wrapper">
+            <div id="general-modal" class="modal fade" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false" style="width:100%!important;height:90%!important">
+                <div class="modal-dialog modal-lg" style="width:65%!important;height:90%!important; border-bottom:none !important;">
+                    <div class="modal-content">
+                    </div>
+                </div>
+            </div>
+            @RenderBody()
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <partial name="_CookieConsentPartial" />
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+    });
+    $('.modal-content').resizable({
+            alsoResize: ".modal-dialog",
+        minHeight: 300,
+        minWidth: 300
+    });
+    $('.modal-dialog').draggable();
+
+</script>

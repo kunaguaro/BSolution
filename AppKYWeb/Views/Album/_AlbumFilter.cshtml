@@ -1,0 +1,61 @@
+﻿@model Web.Domain.Views.Album.AlbumListView
+
+
+<div class="wrapper center-block">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading active" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" id="hide-filter-btn" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Criterio de busqueda
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body" style="background-color: azure">
+                    <div class="row">
+
+                        <form asp-action="_AlbumFilter" id="formAlbumFilter">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="col-lg-12 col-md-12 col-xs-12" style="padding-left:15px; padding-right:15px">
+                                <div class="row" style="padding-left:10px">
+                                   
+                                    <div class="col-md-4" style="padding-right:15px">
+                                        <div class="form-group">
+                                            <label asp-for="title" class="control-label"></label>
+                                            <select asp-for="id" asp-items="new MultiSelectList(Enumerable.Empty<SelectListItem>())" style="width:100%">
+                                            </select>
+                                            <span asp-validation-for="id" class="text-danger"></span>
+
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class="row " style="text-align:right; padding-right:30px">
+                                
+                                <a class="btn btn-xs btn-default" style="width:120px" onclick="AlbumFunctions.setAlbumFilter(false,1);">Filtrar</a>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.panel-collapse').on('show.bs.collapse', function () {
+        $(this).siblings('.panel-heading').addClass('active');
+    });
+
+    $('.panel-collapse').on('hide.bs.collapse', function () {
+        $(this).siblings('.panel-heading').removeClass('active');
+    });
+
+
+</script>
+
+
+

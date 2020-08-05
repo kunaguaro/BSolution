@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MappingDtos\**" />
+    <Compile Remove="MappingViews\**" />
+    <EmbeddedResource Remove="MappingDtos\**" />
+    <EmbeddedResource Remove="MappingViews\**" />
+    <None Remove="MappingDtos\**" />
+    <None Remove="MappingViews\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.0.100" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Web.Domain\Web.Domain.csproj" />
+    <ProjectReference Include="..\Web.Infrastructure\Web.Infrastructure.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="Validators\" />
+  </ItemGroup>
+
+</Project>

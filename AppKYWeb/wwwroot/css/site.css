@@ -1,0 +1,203 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.control-label {
+  
+    margin-top:5px !important;
+    margin-bottom:5px !important;
+}
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+
+/* Height fix for select2 */
+.select2-container .select2-selection--single, .select2-container--default .select2-selection--single .select2-selection__rendered, .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 40px;
+    width: 100%;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 40px;
+}
+
+
+
+/* Some style for jquery table  */
+.table .table-header {
+    background: #FEC107;
+    color: #333;
+}
+
+    .table .table-header .cell {
+        padding: 20px;
+    }
+
+
+
+.modal-header {
+    background-color: #7e929c;
+    padding-top: 2px;
+    padding-bottom: 0px;
+}
+
+   
+ /* Some style for dropdown menu for modals */
+.dropdownmenu ul, .dropdownmenu li {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdownmenu ul {
+    background: gray;
+    list-style: none;
+    width: 100%;
+}
+
+.dropdownmenu li {
+    float: left;
+    position: relative;
+    width: auto;
+}
+
+.dropdownmenu a {
+    background: #008cba;
+    color: #FFFFFF;
+    display: block;
+    font: bold 12px/20px sans-serif;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+.dropdownmenu li:hover a {
+    background: #2e2d70;
+}
+
+#submenu {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 35px;
+    visibility: hidden;
+    z-index: 1;
+}
+
+li:hover ul#submenu {
+    opacity: 1;
+    top: 40px; /* adjust this as per top nav padding top & bottom comes */
+    visibility: visible;
+}
+
+#submenu li {
+    float: none;
+    width: 100%;
+}
+
+#submenu a:hover {
+    background: #0b556e;
+}
+
+#submenu a {
+    background-color: #008cba;
+}
+
+.spinner-block {
+    margin: 50px 100px;
+    padding: 100px;
+    border-bottom: 1px solid #eee;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+}
+
+.navbar-brand {
+    padding: 0px;
+}
+
+    .navbar-brand > img {
+        height: 100%;
+        padding: 15px;
+        width: auto;
+    }
+
+.nav a {
+    color: white !important;
+    font-size: 1.3em !important;
+}
+
+.nav li {
+    padding-right: 5px;
+}
+
+
+.panel-heading {
+    padding: 0;
+    border: 0;
+    background-color: aqua;
+}
+
+.panel-title > a, .panel-title > a:active {
+    display: block;
+    padding: 15px;
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-decoration: none;
+}
+
+.panel-heading a:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e114";
+    float: right;
+    transition: all 0.5s;
+}
+
+.panel-heading.active a:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+} 

@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+    <div class="row" style="padding-left:20px">
+        <h2>
+            Participante: Omar Rodriguez
+        </h2>
+        <br />
+        <h4>Herramientas usadas</h4>
+        <ul>
+            <li>Visual Studio: Versión 2019</li>
+        </ul>
+        <br />
+        <h4>Desarrollo:</h4>
+        <ul>
+            <li>Arquitectura: Onion</li>
+            <li>Html y Razor</li>
+            <li>JavaScript, SweetAlert, Bootstrap-table</li>
+        </ul>
+    </div>
+    <div class="row" style="padding-left:20px; text-align:center">
+        <button class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Album")';return false;">Ir al Ejercicio</button>
+    </div>

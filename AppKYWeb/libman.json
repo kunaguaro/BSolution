@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "jqueryui@1.12.1",
+      "destination": "wwwroot/jqueryui/"
+    },
+    {
+      "library": "select2@4.0.12",
+      "destination": "wwwroot/select2/"
+    },
+    {
+      "library": "bootstrap-table@1.16.0",
+      "destination": "wwwroot/bootstrap-table/"
+    }
+  ]
+}

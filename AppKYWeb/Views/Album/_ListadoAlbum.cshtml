@@ -1,0 +1,55 @@
+﻿@model List<Web.Domain.Views.Photo.PhotoListView>
+
+
+
+
+@using (Html.BeginForm("Index", "Album", FormMethod.Get))
+{
+
+}
+<table class="" data-toggle="table" id="table">
+    
+    <thead>
+        <tr>
+
+            <th data-field="id" data-sortable="true">id</th>
+            <th data-field="albumId" data-sortable="true">id album</th>
+            <th data-field="url" data-sortable="true">url</th>
+            <th data-field="thumbnailUrl" data-sortable="true">Thumbnail</th>
+            <th>Comentarios</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.albumId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.url)
+            </td>
+            <td>
+                <img src="@Url.Content(item.thumbnailUrl)" alt="Imagen" width="150" height="150" />
+            </td>
+            <td id="@item.albumId" >
+               
+            </td>
+            <td>
+                <div class="btn-group" style="text-align:right">
+                    <a class="btn btn-default  btn-xs" style="width:28px;margin-right:3px" data-toggle="tooltip" title="Comentarios" onclick="AlbumFunctions.showComments(@item.albumId)"><i class="glyphicon glyphicon-list-alt" style="margin-right:2px"></i> </a>
+                </div>
+            </td>
+        </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<link href="~/bootstrap-table/bootstrap-table.css" rel="stylesheet" />
+<script src="~/bootstrap-table/bootstrap-table.min.js"></script>

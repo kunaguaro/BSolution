@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Web.Domain.Views.Comment.CommentListView>
+    <style type="text/css">
+        .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+            .tg td {
+                
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 11px;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+
+            .tg th {
+              
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+
+            .tg .tg-ps66 {
+                font-size: 11px;
+                text-align: left;
+                vertical-align: top
+            }
+    </style>
+    
+    <h5>
+        Comentarios
+    </h5>
+    <table class="tg">
+        <thead>
+            <tr>
+              
+                <th class="tg-ps66">
+                    @Html.DisplayNameFor(model => model.name)
+                </th>
+                <th class="tg-ps66">
+                    @Html.DisplayNameFor(model => model.email)
+                </th>
+                <th class="tg-ps66">
+                    @Html.DisplayNameFor(model => model.body)
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                   
+                    <td>
+                        @Html.DisplayFor(modelItem => item.name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.body)
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+    <link href="~/bootstrap-table/bootstrap-table.css" rel="stylesheet" />
+    <script src="~/bootstrap-table/bootstrap-table.min.js"></script>
